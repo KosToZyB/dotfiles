@@ -1,10 +1,10 @@
 call plug#begin('~/.local/share/nvim/plugged') 
-let g:go_highlight_types = 1
-
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'fatih/molokai'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 "=====================================================
@@ -21,6 +21,7 @@ syntax on                    " Syntax highlighting
 set ruler                    " Alway show cursor
 set updatetime=500
 set noswapfile               " disable swap files
+let g:go_highlight_types = 1
 
 " color
 syntax enable
@@ -30,7 +31,6 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
 
-"=====================================================
 "===================== MAPPINGS ======================
 
 " ==================== NerdTree ====================
