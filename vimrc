@@ -5,6 +5,7 @@ Plug 'fatih/molokai'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 
 "=====================================================
@@ -20,7 +21,8 @@ set autowrite                " Automatically save before :next, :make etc.
 syntax on                    " Syntax highlighting
 set ruler                    " Alway show cursor
 set updatetime=500
-set noswapfile               " disable swap files
+set noswapfile               " Disable swap files
+set wildmenu                 " Show autocompleate command
 let g:go_highlight_types = 1
 
 " color
